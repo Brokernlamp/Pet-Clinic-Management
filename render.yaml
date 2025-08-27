@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: pet-clinic-backend
+    env: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: npm run start
+    autoDeploy: true
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      # Add these in the Render dashboard or as encrypted values
+      # - key: SUPABASE_URL
+      #   sync: false
+      # - key: SUPABASE_SERVICE_ROLE_KEY
+      #   sync: false
+      # - key: CORS_ORIGIN
+      #   sync: false
+      # - key: PORT
+      #   value: 10000
+
+
